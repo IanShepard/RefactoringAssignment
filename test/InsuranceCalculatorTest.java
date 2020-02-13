@@ -4,13 +4,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class InsuranceCalculatorTest {
 
-    public void setup() {
-        InsuranceCalculator calculator = new InsuranceCalculator();
-    }
-
-    public void teardown() {
-    }
-
     @Test
     public void extremeHighIncome() {
         double income = 1000000;
