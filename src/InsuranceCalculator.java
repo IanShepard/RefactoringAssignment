@@ -11,8 +11,24 @@ public class InsuranceCalculator {
             return (income-30000)*0.1+76500;
 
         } else {
-            return (income-60000)*0.02+105600;
+            return calculateInsuranceVeryHigh(income);
         }
+    }
+
+    private double calculateInsuranceVeryHigh(double income) {
+        return (income- getConstant())* getWeight() + getAdjustment();
+    }
+
+    private int getAdjustment() {
+        return 105600;
+    }
+
+    private double getWeight() {
+        return 0.02;
+    }
+
+    private int getConstant() {
+        return 60000;
     }
 
 }
